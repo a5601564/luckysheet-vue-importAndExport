@@ -43,7 +43,7 @@ export default {
             //userInfo : '导入表格',
             userMenuItem: "",
             myFolderUrl: "",
-            showinfobar: true,
+            showinfobar: false,
             //functionButton: '<input style="font-size: 16px;" type="file" id="Luckyexcel-demo-file" name="Luckyexcel-demo-file" change="demoHandler" />'
             //functionButton: '<button id="" class="btn btn-primary" style="padding:3px 6px;font-size: 12px;margin-right: 10px;">下载</button> <button id="" class="btn btn-primary btn-danger" style=" padding:3px 6px; font-size: 12px; margin-right: 10px;">分享</button> <button id="luckysheet-share-btn-title" class="btn btn-primary btn-danger" style=" padding:3px 6px; font-size: 12px; margin-right: 10px;">秀数据</button>',
             //functionButton: '<input style="font-size: 16px;" type="file" id="Luckyexcel-demo-file" name="Luckyexcel-demo-file" change="demoHandler" />',

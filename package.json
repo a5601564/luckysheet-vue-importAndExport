@@ -10,7 +10,7 @@
   "dependencies": {
     "FileSaver": "^0.10.0",
     "core-js": "^3.6.5",
-    "exceljs": "^4.2.0",
+    "exceljs": "^4.3.0",
     "file-saver": "^2.0.5",
     "luckyexcel": "^1.0.0",
     "vue": "^2.6.11"
