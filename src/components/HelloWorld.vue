@@ -97,18 +97,32 @@ export default {
         }
         var _this = this
         LuckyExcel.transformExcelToLucky(files[0], function(exportJson, luckysheetfile){
-            console.log(exportJson)
+            console.log("exportJson",exportJson)
             if(exportJson.sheets==null || exportJson.sheets.length==0){
                 alert("Failed to read the content of the excel file, currently does not support xls files!");
                 return;
             }
             window.luckysheet.destroy();
-
+            const request_data = {
+                jsonExcel: JSON.stringify(exportJson)
+            }
+           
+            _this.send_request(request_data)
             _this.options.data = exportJson.sheets
             _this.options.title = exportJson.info.name
             _this.options.userInfo = exportJson.info.name.creator
             window.luckysheet.create(_this.options);
         });
+    },
+    send_request(request_data){
+            console.log(request_data)
+            // $.post("http://127.0.0.1:8081/setWorkBook",request_data , function () {
+            //   console.log("ok")
+            // })
+              this.axios.post(`http://127.0.0.1:8081/setWorkBook`,request_data)
+              .then(res=>{
+                  console.log('res=>',res);            
+              })
     },
     downloadExcel(){
           // const value = this.selected;;
